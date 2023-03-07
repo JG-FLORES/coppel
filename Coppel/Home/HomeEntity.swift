@@ -28,4 +28,5 @@ struct Movie: Codable {
     var name: String?
     var backdrop_path: String?
     var poster_path: String?
+    var adult: Bool?
 }

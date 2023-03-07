@@ -31,6 +31,12 @@
 		C91FBE8A29B7D2F80010AB08 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE8929B7D2F80010AB08 /* HomeAssembly.swift */; };
 		C91FBE8E29B7D98C0010AB08 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE8C29B7D98C0010AB08 /* HomeViewCell.swift */; };
 		C91FBE8F29B7D98C0010AB08 /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91FBE8D29B7D98C0010AB08 /* HomeViewCell.xib */; };
+		C91FBE9329B7E2EE0010AB08 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE9129B7E2EE0010AB08 /* DetailViewController.swift */; };
+		C91FBE9429B7E2EE0010AB08 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91FBE9229B7E2EE0010AB08 /* DetailViewController.xib */; };
+		C91FBE9629B7E3190010AB08 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE9529B7E3190010AB08 /* DetailInteractor.swift */; };
+		C91FBE9829B7E32E0010AB08 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE9729B7E32E0010AB08 /* DetailPresenter.swift */; };
+		C91FBE9A29B7E3440010AB08 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE9929B7E3440010AB08 /* DetailRouter.swift */; };
+		C91FBE9C29B7E35A0010AB08 /* DetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE9B29B7E35A0010AB08 /* DetailAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +66,12 @@
 		C91FBE8929B7D2F80010AB08 /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
 		C91FBE8C29B7D98C0010AB08 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		C91FBE8D29B7D98C0010AB08 /* HomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
+		C91FBE9129B7E2EE0010AB08 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C91FBE9229B7E2EE0010AB08 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		C91FBE9529B7E3190010AB08 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		C91FBE9729B7E32E0010AB08 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		C91FBE9929B7E3440010AB08 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		C91FBE9B29B7E35A0010AB08 /* DetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +160,7 @@
 		C91FBE7C29B7D23C0010AB08 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C91FBE9029B7E2B10010AB08 /* Detail */,
 				C91FBE8B29B7D9650010AB08 /* Cell */,
 				C91FBE7D29B7D25B0010AB08 /* HomeViewController.swift */,
 				C91FBE7E29B7D25B0010AB08 /* HomeViewController.xib */,
@@ -167,6 +180,19 @@
 				C91FBE8D29B7D98C0010AB08 /* HomeViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		C91FBE9029B7E2B10010AB08 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C91FBE9129B7E2EE0010AB08 /* DetailViewController.swift */,
+				C91FBE9229B7E2EE0010AB08 /* DetailViewController.xib */,
+				C91FBE9529B7E3190010AB08 /* DetailInteractor.swift */,
+				C91FBE9729B7E32E0010AB08 /* DetailPresenter.swift */,
+				C91FBE9929B7E3440010AB08 /* DetailRouter.swift */,
+				C91FBE9B29B7E35A0010AB08 /* DetailAssembly.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +255,7 @@
 			files = (
 				C91FBE7729B7C4590010AB08 /* LoginViewController.xib in Resources */,
 				C91FBE5B29B7BF1C0010AB08 /* LaunchScreen.storyboard in Resources */,
+				C91FBE9429B7E2EE0010AB08 /* DetailViewController.xib in Resources */,
 				C91FBE8029B7D25B0010AB08 /* HomeViewController.xib in Resources */,
 				C91FBE8F29B7D98C0010AB08 /* HomeViewCell.xib in Resources */,
 				C91FBE5829B7BF1C0010AB08 /* Assets.xcassets in Resources */,
@@ -244,20 +271,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				C91FBE5329B7BF1A0010AB08 /* ViewController.swift in Sources */,
+				C91FBE9A29B7E3440010AB08 /* DetailRouter.swift in Sources */,
 				C91FBE6A29B7C1710010AB08 /* LoginInteractor.swift in Sources */,
 				C91FBE4F29B7BF1A0010AB08 /* AppDelegate.swift in Sources */,
 				C91FBE5129B7BF1A0010AB08 /* SceneDelegate.swift in Sources */,
 				C91FBE6C29B7C1870010AB08 /* LoginEntity.swift in Sources */,
+				C91FBE9829B7E32E0010AB08 /* DetailPresenter.swift in Sources */,
 				C91FBE8829B7D2E70010AB08 /* HomeRouter.swift in Sources */,
 				C91FBE8A29B7D2F80010AB08 /* HomeAssembly.swift in Sources */,
 				C91FBE6E29B7C19A0010AB08 /* LoginRouter.swift in Sources */,
 				C91FBE7029B7C1B20010AB08 /* LoginAssembly.swift in Sources */,
 				C91FBE8429B7D2C20010AB08 /* HomePresenter.swift in Sources */,
+				C91FBE9329B7E2EE0010AB08 /* DetailViewController.swift in Sources */,
+				C91FBE9629B7E3190010AB08 /* DetailInteractor.swift in Sources */,
 				C91FBE8229B7D2AE0010AB08 /* HomeInteractor.swift in Sources */,
 				C91FBE7B29B7CEB40010AB08 /* Overlay.swift in Sources */,
 				C91FBE6829B7C11F0010AB08 /* LoginPresenter.swift in Sources */,
 				C91FBE7629B7C4590010AB08 /* LoginViewController.swift in Sources */,
 				C91FBE7329B7C2E10010AB08 /* NavigationBuilder.swift in Sources */,
+				C91FBE9C29B7E35A0010AB08 /* DetailAssembly.swift in Sources */,
 				C91FBE8629B7D2D20010AB08 /* HomeEntity.swift in Sources */,
 				C91FBE7F29B7D25B0010AB08 /* HomeViewController.swift in Sources */,
 				C91FBE8E29B7D98C0010AB08 /* HomeViewCell.swift in Sources */,

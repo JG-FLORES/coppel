@@ -33,6 +33,10 @@ extension HomeInteractor: HomeUserCase {
                 return
             }
             do {
+                if let string = String(bytes: data, encoding: .utf8) {
+                    print(string)
+                }
+                
                 let entities = try JSONDecoder().decode(Movies.self, from: data)
                 callback(.succes(data: entities.results))
             }

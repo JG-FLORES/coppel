@@ -34,6 +34,7 @@ extension HomeRouter: HomeRouting {
     }
     
     func goToDetail(detail: Movie) {
-        
+        let vc = DetailAssembly.build(detail: detail)
+        self.view.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -37,7 +37,7 @@ class HomeViewCell: UICollectionViewCell {
             date.text = data.first_air_date
         }
 
-        guard let image = data.backdrop_path else { return }
+//        guard let image = data.backdrop_path else { return }
 //        DispatchQueue.main.async {
 //            let url = URL(string: "https://api.themoviedb.org\(image)")!
 //            let data = try? Data(contentsOf: url)

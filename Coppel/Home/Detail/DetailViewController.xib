@@ -32,18 +32,18 @@
                         <constraint firstAttribute="width" constant="216" id="NCa-uZ-jw1"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykc-RH-ONY">
-                    <rect key="frame" x="16" y="307" width="348" height="32"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykc-RH-ONY">
+                    <rect key="frame" x="16" y="307" width="348" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="348" id="LAw-vt-zQV"/>
-                        <constraint firstAttribute="height" constant="32" id="XTU-XI-DAO"/>
+                        <constraint firstAttribute="height" constant="60" id="XTU-XI-DAO"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUY-zH-CEH">
-                    <rect key="frame" x="16" y="344" width="348" height="32"/>
+                    <rect key="frame" x="16" y="372" width="348" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="348" id="IYf-G4-6ex"/>
                         <constraint firstAttribute="height" constant="32" id="XOO-Se-gHj"/>
@@ -53,7 +53,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfi-RV-YKC">
-                    <rect key="frame" x="16" y="455" width="348" height="32"/>
+                    <rect key="frame" x="16" y="483" width="348" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="348" id="8xi-6h-YDO"/>
                         <constraint firstAttribute="height" constant="32" id="Fqa-g7-IEZ"/>
@@ -63,7 +63,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJ6-Ld-kiO">
-                    <rect key="frame" x="16" y="418" width="348" height="32"/>
+                    <rect key="frame" x="16" y="446" width="348" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="348" id="E12-im-ECH"/>
                         <constraint firstAttribute="height" constant="32" id="XNb-GB-BcN"/>
@@ -73,7 +73,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FC-Tc-7J8">
-                    <rect key="frame" x="16" y="381" width="348" height="32"/>
+                    <rect key="frame" x="16" y="409" width="348" height="32"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="32" id="AP7-fB-x4D"/>
                         <constraint firstAttribute="width" constant="348" id="ZyC-MT-5XL"/>
@@ -83,7 +83,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYm-VI-K49">
-                    <rect key="frame" x="16" y="492" width="348" height="32"/>
+                    <rect key="frame" x="16" y="520" width="348" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="348" id="2HR-Rh-2Xf"/>
                         <constraint firstAttribute="height" constant="32" id="vfi-zy-yKa"/>
@@ -93,7 +93,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvu-9b-NbJ">
-                    <rect key="frame" x="16" y="534" width="348" height="250"/>
+                    <rect key="frame" x="16" y="562" width="348" height="250"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="250" id="2KX-ET-ySV"/>
                         <constraint firstAttribute="width" constant="348" id="POJ-Pd-yIB"/>

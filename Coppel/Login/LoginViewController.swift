@@ -26,6 +26,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func login(_ sender: Any) {
         view.endEditing(true)
+        Overlay.shared.showOverlayBasic(self.view, "Validando...")
+        
         let user = user.text!
         let password = password.text!
         
@@ -38,6 +40,7 @@ extension LoginViewController: LoginView {
         print(data)
 
         DispatchQueue.main.async {
+            Overlay.shared.hideOverlay()
             self.text.text = data.status_message
 
             if !data.success {

@@ -21,6 +21,7 @@
 		C91FBE7329B7C2E10010AB08 /* NavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE7229B7C2E10010AB08 /* NavigationBuilder.swift */; };
 		C91FBE7629B7C4590010AB08 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE7429B7C4590010AB08 /* LoginViewController.swift */; };
 		C91FBE7729B7C4590010AB08 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91FBE7529B7C4590010AB08 /* LoginViewController.xib */; };
+		C91FBE7B29B7CEB40010AB08 /* Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE7A29B7CEB40010AB08 /* Overlay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		C91FBE7229B7C2E10010AB08 /* NavigationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBuilder.swift; sourceTree = "<group>"; };
 		C91FBE7429B7C4590010AB08 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C91FBE7529B7C4590010AB08 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		C91FBE7A29B7CEB40010AB08 /* Overlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +74,7 @@
 		C91FBE4D29B7BF1A0010AB08 /* Coppel */ = {
 			isa = PBXGroup;
 			children = (
-				C91FBE7129B7C2BA0010AB08 /* Navigation */,
+				C91FBE7929B7CE9C0010AB08 /* Utils */,
 				C91FBE6229B7C0DC0010AB08 /* Login */,
 				C91FBE4E29B7BF1A0010AB08 /* AppDelegate.swift */,
 				C91FBE5029B7BF1A0010AB08 /* SceneDelegate.swift */,
@@ -105,6 +107,23 @@
 				C91FBE7229B7C2E10010AB08 /* NavigationBuilder.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		C91FBE7829B7CE940010AB08 /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				C91FBE7A29B7CEB40010AB08 /* Overlay.swift */,
+			);
+			path = Overlay;
+			sourceTree = "<group>";
+		};
+		C91FBE7929B7CE9C0010AB08 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C91FBE7829B7CE940010AB08 /* Overlay */,
+				C91FBE7129B7C2BA0010AB08 /* Navigation */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +205,7 @@
 				C91FBE6C29B7C1870010AB08 /* LoginEntity.swift in Sources */,
 				C91FBE6E29B7C19A0010AB08 /* LoginRouter.swift in Sources */,
 				C91FBE7029B7C1B20010AB08 /* LoginAssembly.swift in Sources */,
+				C91FBE7B29B7CEB40010AB08 /* Overlay.swift in Sources */,
 				C91FBE6829B7C11F0010AB08 /* LoginPresenter.swift in Sources */,
 				C91FBE7629B7C4590010AB08 /* LoginViewController.swift in Sources */,
 				C91FBE7329B7C2E10010AB08 /* NavigationBuilder.swift in Sources */,

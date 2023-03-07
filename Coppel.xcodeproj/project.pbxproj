@@ -22,6 +22,15 @@
 		C91FBE7629B7C4590010AB08 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE7429B7C4590010AB08 /* LoginViewController.swift */; };
 		C91FBE7729B7C4590010AB08 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91FBE7529B7C4590010AB08 /* LoginViewController.xib */; };
 		C91FBE7B29B7CEB40010AB08 /* Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE7A29B7CEB40010AB08 /* Overlay.swift */; };
+		C91FBE7F29B7D25B0010AB08 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE7D29B7D25B0010AB08 /* HomeViewController.swift */; };
+		C91FBE8029B7D25B0010AB08 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91FBE7E29B7D25B0010AB08 /* HomeViewController.xib */; };
+		C91FBE8229B7D2AE0010AB08 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE8129B7D2AE0010AB08 /* HomeInteractor.swift */; };
+		C91FBE8429B7D2C20010AB08 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE8329B7D2C20010AB08 /* HomePresenter.swift */; };
+		C91FBE8629B7D2D20010AB08 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE8529B7D2D20010AB08 /* HomeEntity.swift */; };
+		C91FBE8829B7D2E70010AB08 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE8729B7D2E70010AB08 /* HomeRouter.swift */; };
+		C91FBE8A29B7D2F80010AB08 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE8929B7D2F80010AB08 /* HomeAssembly.swift */; };
+		C91FBE8E29B7D98C0010AB08 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE8C29B7D98C0010AB08 /* HomeViewCell.swift */; };
+		C91FBE8F29B7D98C0010AB08 /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91FBE8D29B7D98C0010AB08 /* HomeViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +51,15 @@
 		C91FBE7429B7C4590010AB08 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C91FBE7529B7C4590010AB08 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		C91FBE7A29B7CEB40010AB08 /* Overlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlay.swift; sourceTree = "<group>"; };
+		C91FBE7D29B7D25B0010AB08 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C91FBE7E29B7D25B0010AB08 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		C91FBE8129B7D2AE0010AB08 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		C91FBE8329B7D2C20010AB08 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		C91FBE8529B7D2D20010AB08 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
+		C91FBE8729B7D2E70010AB08 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		C91FBE8929B7D2F80010AB08 /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
+		C91FBE8C29B7D98C0010AB08 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		C91FBE8D29B7D98C0010AB08 /* HomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				C91FBE7929B7CE9C0010AB08 /* Utils */,
+				C91FBE7C29B7D23C0010AB08 /* Home */,
 				C91FBE6229B7C0DC0010AB08 /* Login */,
 				C91FBE4E29B7BF1A0010AB08 /* AppDelegate.swift */,
 				C91FBE5029B7BF1A0010AB08 /* SceneDelegate.swift */,
@@ -124,6 +143,30 @@
 				C91FBE7129B7C2BA0010AB08 /* Navigation */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		C91FBE7C29B7D23C0010AB08 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C91FBE8B29B7D9650010AB08 /* Cell */,
+				C91FBE7D29B7D25B0010AB08 /* HomeViewController.swift */,
+				C91FBE7E29B7D25B0010AB08 /* HomeViewController.xib */,
+				C91FBE8129B7D2AE0010AB08 /* HomeInteractor.swift */,
+				C91FBE8329B7D2C20010AB08 /* HomePresenter.swift */,
+				C91FBE8529B7D2D20010AB08 /* HomeEntity.swift */,
+				C91FBE8729B7D2E70010AB08 /* HomeRouter.swift */,
+				C91FBE8929B7D2F80010AB08 /* HomeAssembly.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C91FBE8B29B7D9650010AB08 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C91FBE8C29B7D98C0010AB08 /* HomeViewCell.swift */,
+				C91FBE8D29B7D98C0010AB08 /* HomeViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +229,8 @@
 			files = (
 				C91FBE7729B7C4590010AB08 /* LoginViewController.xib in Resources */,
 				C91FBE5B29B7BF1C0010AB08 /* LaunchScreen.storyboard in Resources */,
+				C91FBE8029B7D25B0010AB08 /* HomeViewController.xib in Resources */,
+				C91FBE8F29B7D98C0010AB08 /* HomeViewCell.xib in Resources */,
 				C91FBE5829B7BF1C0010AB08 /* Assets.xcassets in Resources */,
 				C91FBE5629B7BF1A0010AB08 /* Main.storyboard in Resources */,
 			);
@@ -203,12 +248,19 @@
 				C91FBE4F29B7BF1A0010AB08 /* AppDelegate.swift in Sources */,
 				C91FBE5129B7BF1A0010AB08 /* SceneDelegate.swift in Sources */,
 				C91FBE6C29B7C1870010AB08 /* LoginEntity.swift in Sources */,
+				C91FBE8829B7D2E70010AB08 /* HomeRouter.swift in Sources */,
+				C91FBE8A29B7D2F80010AB08 /* HomeAssembly.swift in Sources */,
 				C91FBE6E29B7C19A0010AB08 /* LoginRouter.swift in Sources */,
 				C91FBE7029B7C1B20010AB08 /* LoginAssembly.swift in Sources */,
+				C91FBE8429B7D2C20010AB08 /* HomePresenter.swift in Sources */,
+				C91FBE8229B7D2AE0010AB08 /* HomeInteractor.swift in Sources */,
 				C91FBE7B29B7CEB40010AB08 /* Overlay.swift in Sources */,
 				C91FBE6829B7C11F0010AB08 /* LoginPresenter.swift in Sources */,
 				C91FBE7629B7C4590010AB08 /* LoginViewController.swift in Sources */,
 				C91FBE7329B7C2E10010AB08 /* NavigationBuilder.swift in Sources */,
+				C91FBE8629B7D2D20010AB08 /* HomeEntity.swift in Sources */,
+				C91FBE7F29B7D25B0010AB08 /* HomeViewController.swift in Sources */,
+				C91FBE8E29B7D98C0010AB08 /* HomeViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

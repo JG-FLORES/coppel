@@ -27,18 +27,16 @@ class LoginViewController: UIViewController {
     @IBAction func login(_ sender: Any) {
         view.endEditing(true)
         Overlay.shared.showOverlayBasic(self.view, "Validando...")
-        
-        let user = user.text!
-        let password = password.text!
-        
-        presenter?.login(user: user, password: password)
+        self.presenter?.prepareForRouter()
+//        let user = user.text!
+//        let password = password.text!
+//        
+//        presenter?.login(user: user, password: password)
     }
 }
 
 extension LoginViewController: LoginView {
     func upDate(data: Login) {
-        print(data)
-
         DispatchQueue.main.async {
             Overlay.shared.hideOverlay()
             self.text.text = data.status_message

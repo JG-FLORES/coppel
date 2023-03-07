@@ -22,5 +22,7 @@ class LoginRouter {
 
 extension LoginRouter: LoginRouting {
     func goToHome() {
+        let vc = HomeAssembly.build()
+        self.view.navigationController?.pushViewController(vc, animated: true)
     }
 }

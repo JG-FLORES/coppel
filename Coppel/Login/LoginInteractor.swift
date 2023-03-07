@@ -1,0 +1,70 @@
+//
+//  LoginInteractor.swift
+//  Coppel
+//
+//  Created by JG on 07/03/23.
+//
+
+import Foundation
+
+enum ServiceResult {
+    case result(data: Login)
+}
+
+typealias ServiceCompletion = (_ result: ServiceResult) -> ()
+
+protocol LoginUseCase {
+    func fetchRequest(user: String, password: String, callback: @escaping ServiceCompletion)
+}
+
+class LoginInteractor {
+}
+
+extension LoginInteractor: LoginUseCase {
+    func fetchRequest(user: String, password: String, callback: @escaping ServiceCompletion) {
+        guard let url = URL(string: "https://api.themoviedb.org/3/authentication/token/new?api_key=54b4dae81703af84602fb788f06fc875") else { return }
+        
+        let task = URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            do {
+                if let string = String(bytes: data, encoding: .utf8) {
+                    print(string)
+                }
+                
+                let response = try JSONDecoder().decode(ResultResponse.self, from: data)
+                
+                if response.success {
+                    let uploadDataModel = UploadData(username: user, password: password, request_token: response.request_token)
+                    guard let jsonData = try? JSONEncoder().encode(uploadDataModel) else { return }
+                    
+                    let url = URL(string: "https://api.themoviedb.org/3/authentication/token/validate_with_login?api_key=54b4dae81703af84602fb788f06fc875")
+                    
+                    var request = URLRequest(url: url!)
+                    request.httpMethod = "POST"
+                    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                    request.setValue("application/json", forHTTPHeaderField: "Accept")
+                    request.httpBody = jsonData
+                    
+                    URLSession.shared.dataTask(with: request) { data, response, error in
+                        guard let data = data, error == nil else { return }
+                        do {
+                            if let string = String(bytes: data, encoding: .utf8) {
+                                print(string)
+                            }
+                            
+                            let entities = try JSONDecoder().decode(Login.self, from: data)
+                            callback(.result(data: entities))
+                        }
+                        catch {
+                        }
+                    }.resume()
+                }
+            }
+            catch {
+            }
+        }
+        task.resume()
+    }
+}

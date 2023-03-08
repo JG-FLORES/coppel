@@ -23,6 +23,12 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dissmissKeyboard))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func dissmissKeyboard()  {
+        self.view.endEditing(true)
     }
     
     @IBAction func login(_ sender: Any) {
@@ -40,6 +46,7 @@ extension LoginViewController: LoginView {
     func error(str: String) {
         DispatchQueue.main.async {
             self.view.isUserInteractionEnabled = true
+            self.text.text = str
             Overlay.shared.hideOverlay()
         }
     }

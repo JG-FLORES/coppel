@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol DetailView: AnyObject {
     
@@ -13,7 +14,7 @@ protocol DetailView: AnyObject {
 
 class DetailViewController: UIViewController {
     
-//    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var titlee: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var popularity: UILabel!
@@ -58,6 +59,8 @@ class DetailViewController: UIViewController {
         guard let average = detail?.vote_average else { return }
         vote_average.text = "Promedio: \(average)"
 
+        image.kf.indicatorType = .activity
+        image.kf.setImage(with: URL(string:"https://image.tmdb.org/t/p/w200\(detail?.poster_path ?? "")"), placeholder: nil, options: [.transition(.fade(1.7))],completionHandler: nil)
     }
 }
 

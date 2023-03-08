@@ -45,6 +45,7 @@
 		C983DC4729B829090055B772 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C983DC4629B829090055B772 /* ProfileRouter.swift */; };
 		C983DC4929B829220055B772 /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C983DC4829B829220055B772 /* ProfileEntity.swift */; };
 		C983DC4B29B829320055B772 /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C983DC4A29B829320055B772 /* ProfileAssembly.swift */; };
+		C9D1C8D929B93B9D002EB688 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D1C8D829B93B9D002EB688 /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		C983DC4629B829090055B772 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		C983DC4829B829220055B772 /* ProfileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEntity.swift; sourceTree = "<group>"; };
 		C983DC4A29B829320055B772 /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
+		C9D1C8D829B93B9D002EB688 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		CA7F1EFE8DFF18C04CBDB19D /* Pods-Coppel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coppel.release.xcconfig"; path = "Target Support Files/Pods-Coppel/Pods-Coppel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +176,7 @@
 		C91FBE7929B7CE9C0010AB08 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C9D1C8D729B93B89002EB688 /* URL */,
 				C91FBE7829B7CE940010AB08 /* Overlay */,
 				C91FBE7129B7C2BA0010AB08 /* Navigation */,
 			);
@@ -229,6 +232,14 @@
 				C983DC4A29B829320055B772 /* ProfileAssembly.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		C9D1C8D729B93B89002EB688 /* URL */ = {
+			isa = PBXGroup;
+			children = (
+				C9D1C8D829B93B9D002EB688 /* Network.swift */,
+			);
+			path = URL;
 			sourceTree = "<group>";
 		};
 		EA4C49E634A773E28CB3BE14 /* Frameworks */ = {
@@ -388,6 +399,7 @@
 				C91FBE8229B7D2AE0010AB08 /* HomeInteractor.swift in Sources */,
 				C91FBE7B29B7CEB40010AB08 /* Overlay.swift in Sources */,
 				C91FBE6829B7C11F0010AB08 /* LoginPresenter.swift in Sources */,
+				C9D1C8D929B93B9D002EB688 /* Network.swift in Sources */,
 				C91FBE7629B7C4590010AB08 /* LoginViewController.swift in Sources */,
 				C91FBE7329B7C2E10010AB08 /* NavigationBuilder.swift in Sources */,
 				C983DC4729B829090055B772 /* ProfileRouter.swift in Sources */,

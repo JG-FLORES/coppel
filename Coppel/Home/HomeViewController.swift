@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
         title = "TV Shows"
         configure()
         collectionView.register(UINib(nibName: "HomeViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
-        presenter?.fetch(url: "https://api.themoviedb.org/3/movie/popular?api_key=54b4dae81703af84602fb788f06fc875&language=en-US&page=1")
+        presenter?.fetch(url: "\(Network.ForMoview)popular?api_key=\(Network.APIKey)&language=en-US&page=1")
         
         let btnBack = UIBarButtonItem(image: UIImage(systemName: "chart.bar.doc.horizontal.fill"), style: .done, target: self, action: #selector(showOptionsMenu))
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -55,20 +55,19 @@ class HomeViewController: UIViewController {
         self.present(optionMenu, animated: true, completion: nil)
     }
     
-    
     @IBAction func didChange(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             updeta()
-            presenter?.fetch(url: "https://api.themoviedb.org/3/movie/popular?api_key=54b4dae81703af84602fb788f06fc875&language=en-US&page=1")
+            presenter?.fetch(url: "\(Network.ForMoview)/popular?api_key=\(Network.APIKey)&language=en-US&page=1")
         } else if sender.selectedSegmentIndex == 1 {
             updeta()
-            presenter?.fetch(url: "https://api.themoviedb.org/3/movie/top_rated?api_key=54b4dae81703af84602fb788f06fc875&language=en-US&page=1")
+            presenter?.fetch(url: "\(Network.ForMoview)top_rated?api_key=\(Network.APIKey)&language=en-US&page=1")
         } else if sender.selectedSegmentIndex == 2 {
             updeta()
-            presenter?.fetch(url: "https://api.themoviedb.org/3/tv/on_the_air?api_key=54b4dae81703af84602fb788f06fc875&language=en-US&page=1")
+            presenter?.fetch(url: "\(Network.ForTVShow)on_the_air?api_key=\(Network.APIKey)&language=en-US&page=1")
         } else if sender.selectedSegmentIndex == 3 {
             updeta()
-            presenter?.fetch(url: "https://api.themoviedb.org/3/tv/airing_today?api_key=54b4dae81703af84602fb788f06fc875&language=en-US&page=1")
+            presenter?.fetch(url: "\(Network.ForTVShow)airing_today?api_key=\(Network.APIKey)&language=en-US&page=1")
         }
     }
     

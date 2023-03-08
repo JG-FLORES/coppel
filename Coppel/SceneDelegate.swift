@@ -21,9 +21,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         
-        let initialViewController = LoginAssembly.buildNavigation(usingNavigationFactory: NavigationBuilder.build)
-        window?.rootViewController = initialViewController
-        window?.makeKeyAndVisible()
+        let prefs:UserDefaults = UserDefaults.standard
+        let isLoggedIn:Int = prefs.integer(forKey: "ISLOGGEDIN") as Int
+
+        if isLoggedIn != 1 {
+            let initialViewController = LoginAssembly.buildNavigation(usingNavigationFactory: NavigationBuilder.build)
+            window?.rootViewController = initialViewController
+            window?.makeKeyAndVisible()
+        } else {
+            let initialViewController = HomeAssembly.buildNavigation(usingNavigationFactory: NavigationBuilder.build)
+            window?.rootViewController = initialViewController
+            window?.makeKeyAndVisible()
+        }
+        
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

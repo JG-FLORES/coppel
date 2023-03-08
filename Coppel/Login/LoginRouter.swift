@@ -22,6 +22,10 @@ class LoginRouter {
 
 extension LoginRouter: LoginRouting {
     func goToHome() {
+        let prefs = UserDefaults.standard
+        prefs.set(1, forKey: "ISLOGGEDIN")
+        prefs.synchronize()
+        
         let vc = HomeAssembly.build()
         self.view.navigationController?.pushViewController(vc, animated: true)
     }

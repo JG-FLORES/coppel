@@ -25,6 +25,9 @@ class HomeRouter {
 extension HomeRouter: HomeRouting {
     
     func logOut() {
+        let appDomain = Bundle.main.bundleIdentifier
+        UserDefaults.standard.removePersistentDomain(forName: appDomain!)
+        
         let vc = LoginAssembly.build()
         self.view.navigationController?.pushViewController(vc, animated: true)
     }

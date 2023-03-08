@@ -27,8 +27,7 @@ class HomeViewController: UIViewController {
         collectionView.register(UINib(nibName: "HomeViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         presenter?.fetch(url: "https://api.themoviedb.org/3/movie/popular?api_key=54b4dae81703af84602fb788f06fc875&language=en-US&page=1")
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(addTapped))
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(addTapped))        
     }
     
     @objc func addTapped() {

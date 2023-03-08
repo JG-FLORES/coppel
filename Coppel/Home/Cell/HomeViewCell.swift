@@ -39,6 +39,6 @@ class HomeViewCell: UICollectionViewCell {
         }
         
         image.kf.indicatorType = .activity
-        image.kf.setImage(with: URL(string:"https://image.tmdb.org/t/p/w200\(data.poster_path ?? "")"), placeholder: nil, options: [.transition(.fade(1.7))],completionHandler: nil)
+        image.kf.setImage(with: URL(string:"\(Network.image)\(data.poster_path ?? "")"), placeholder: nil, options: [.transition(.fade(1.7))],completionHandler: nil)
     }
 }

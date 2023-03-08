@@ -58,7 +58,7 @@ class HomeViewController: UIViewController {
     @IBAction func didChange(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             updeta()
-            presenter?.fetch(url: "\(Network.ForMoview)/popular?api_key=\(Network.APIKey)&language=en-US&page=1")
+            presenter?.fetch(url: "\(Network.ForMoview)popular?api_key=\(Network.APIKey)&language=en-US&page=1")
         } else if sender.selectedSegmentIndex == 1 {
             updeta()
             presenter?.fetch(url: "\(Network.ForMoview)top_rated?api_key=\(Network.APIKey)&language=en-US&page=1")

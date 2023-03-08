@@ -23,7 +23,7 @@ class LoginInteractor {
 
 extension LoginInteractor: LoginUseCase {
     func fetchRequest(user: String, password: String, callback: @escaping ServiceCompletion) {
-        guard let url = URL(string: "https://api.themoviedb.org/3/authentication/token/new?api_key=54b4dae81703af84602fb788f06fc875") else { return }
+        guard let url = URL(string: "\(Network.token)?api_key=\(Network.APIKey)") else { return }
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data, error == nil else {
@@ -41,7 +41,7 @@ extension LoginInteractor: LoginUseCase {
                     let uploadDataModel = UploadData(username: user, password: password, request_token: response.request_token)
                     guard let jsonData = try? JSONEncoder().encode(uploadDataModel) else { return }
                     
-                    let url = URL(string: "https://api.themoviedb.org/3/authentication/token/validate_with_login?api_key=54b4dae81703af84602fb788f06fc875")
+                    let url = URL(string: "\(Network.login)?api_key=\(Network.APIKey)")
                     
                     var request = URLRequest(url: url!)
                     request.httpMethod = "POST"

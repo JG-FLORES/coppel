@@ -60,7 +60,7 @@ class DetailViewController: UIViewController {
         vote_average.text = "Promedio: \(average)"
 
         image.kf.indicatorType = .activity
-        image.kf.setImage(with: URL(string:"https://image.tmdb.org/t/p/w200\(detail?.poster_path ?? "")"), placeholder: nil, options: [.transition(.fade(1.7))],completionHandler: nil)
+        image.kf.setImage(with: URL(string:"\(Network.image)\(detail?.poster_path ?? "")"), placeholder: nil, options: [.transition(.fade(1.7))],completionHandler: nil)
     }
 }
 

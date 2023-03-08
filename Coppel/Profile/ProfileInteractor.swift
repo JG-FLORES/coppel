@@ -32,7 +32,7 @@ class ProfileInteractor {
 extension ProfileInteractor: ProfileUserCase {
     
     func fetchFavorite(callback: @escaping CompletionFavorite) {
-        guard let url = URL(string: "https://api.themoviedb.org/3/account/{account_id}/favorite/movies?api_key=54b4dae81703af84602fb788f06fc875&language=en-US&sort_by=created_at.asc&page=1") else { return }
+        guard let url = URL(string: "\(Network.account)/{account_id}/favorite/movies?api_key=\(Network.APIKey)&language=en-US&sort_by=created_at.asc&page=1") else { return }
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data, error == nil else {
@@ -56,7 +56,7 @@ extension ProfileInteractor: ProfileUserCase {
     
     
     func fetch(callback: @escaping CompletionUser) {
-        guard let url = URL(string: "https://api.themoviedb.org/3/account?api_key=54b4dae81703af84602fb788f06fc875") else { return }
+        guard let url = URL(string: "\(Network.account)?api_key=\(Network.APIKey)") else { return }
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data, error == nil else {

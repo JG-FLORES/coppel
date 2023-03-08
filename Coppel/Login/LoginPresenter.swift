@@ -36,6 +36,8 @@ extension LoginPresenter: LoginPresentation {
             switch result {
             case .result(data: let data):
                 self.view?.upDate(data: data)
+            case .error(str: let str):
+                self.view?.error(str: str)
             }
         }
     }

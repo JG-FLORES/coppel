@@ -9,6 +9,7 @@ import Foundation
 
 enum ServiceResult {
     case result(data: Login)
+    case error(str: String)
 }
 
 typealias ServiceCompletion = (_ result: ServiceResult) -> ()
@@ -26,6 +27,7 @@ extension LoginInteractor: LoginUseCase {
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data, error == nil else {
+                callback(.error(str: "assessar"))
                 return
             }
             do {

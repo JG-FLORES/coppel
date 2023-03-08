@@ -13,7 +13,7 @@ enum ResultUser {
 }
 
 enum ResultFavorite {
-    case succes(data: Favorite)
+    case succes(data: [Movie])
     case failed(string: String?)
 }
 
@@ -44,8 +44,8 @@ extension ProfileInteractor: ProfileUserCase {
                     print(string)
                 }
                 
-                let entities = try JSONDecoder().decode(Favorite.self, from: data)
-                callback(.succes(data: entities))
+                let entities = try JSONDecoder().decode(Movies.self, from: data)
+                callback(.succes(data: entities.results))
             }
             catch {
                 callback(.failed(string: "Ah fallado..3322..."))

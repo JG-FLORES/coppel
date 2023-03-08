@@ -52,13 +52,13 @@
                             <constraint firstAttribute="width" constant="231" id="OfR-yP-WHJ"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="textColor" systemColor="systemMintColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="YzQ-Nw-Q3W" firstAttribute="top" secondItem="teY-gB-CHg" secondAttribute="bottom" constant="17" id="3Da-aZ-vw9"/>
                 <constraint firstAttribute="trailing" secondItem="teY-gB-CHg" secondAttribute="trailing" constant="6" id="4R5-gg-7hI"/>

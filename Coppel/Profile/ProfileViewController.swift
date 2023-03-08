@@ -10,7 +10,7 @@ import UIKit
 protocol ProfileView: AnyObject {
     func upDateProfile(user: User)
     func error(error: String)
-    func favorite(favorite: Favorite)
+    func favorite(favorite: [Movie])
 }
 
 class ProfileViewController: UIViewController {
@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController {
     private let reuseIdentifier = "Cell"
     
     var presenter: ProfilePresenter?
+    var movies: [Movie] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +41,11 @@ class ProfileViewController: UIViewController {
 
 extension ProfileViewController: ProfileView {
     
-    func favorite(favorite: Favorite) {
-        
+    func favorite(favorite: [Movie]) {
+        DispatchQueue.main.async {
+            self.movies = favorite
+            self.collectionView.reloadData()
+        }
     }
     
     func upDateProfile(user: User) {
@@ -57,12 +61,12 @@ extension ProfileViewController: ProfileView {
 
 extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return movies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! HomeViewCell
-//        cell.setupUI(data: movies[indexPath.row])
+        cell.setupUI(data: movies[indexPath.row])
         return cell
     }
 }

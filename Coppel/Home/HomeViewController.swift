@@ -13,13 +13,13 @@ protocol HomeView: AnyObject {
 }
 
 class HomeViewController: UIViewController {
-
+    
     var presenter: HomePresenter?
     @IBOutlet weak var collectionView: UICollectionView!
     
     private let reuseIdentifier = "Cell"
     var movies: [Movie] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "TV Shows"
@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
         presenter?.fetch(url: "https://api.themoviedb.org/3/movie/popular?api_key=54b4dae81703af84602fb788f06fc875&language=en-US&page=1")
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(addTapped))
-
+        
     }
     
     @objc func addTapped() {

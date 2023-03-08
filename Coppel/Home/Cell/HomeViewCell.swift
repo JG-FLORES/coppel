@@ -17,12 +17,11 @@ class HomeViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        layer.cornerRadius = 15
+        image.layer.cornerRadius = 15
     }
 
     func setupUI(data: Movie) {
-        layer.cornerRadius = 15
-        image.layer.cornerRadius = 15
-       
         descriptioon.text = data.overview
 
         if data.title != nil {

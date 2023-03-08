@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        
+        window?.overrideUserInterfaceStyle = .dark
+
         let prefs:UserDefaults = UserDefaults.standard
         let isLoggedIn:Int = prefs.integer(forKey: "ISLOGGEDIN") as Int
 

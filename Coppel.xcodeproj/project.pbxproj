@@ -245,7 +245,6 @@
 				028386834255A1268FC4E0FD /* Pods-Coppel.debug.xcconfig */,
 				CA7F1EFE8DFF18C04CBDB19D /* Pods-Coppel.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

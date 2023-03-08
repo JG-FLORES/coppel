@@ -20,6 +20,7 @@ class HomeViewCell: UICollectionViewCell {
         super.awakeFromNib()
         layer.cornerRadius = 15
         image.layer.cornerRadius = 15
+        title.numberOfLines = 0
     }
 
     func setupUI(data: Movie) {

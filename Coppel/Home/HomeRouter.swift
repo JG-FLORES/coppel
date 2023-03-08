@@ -30,7 +30,8 @@ extension HomeRouter: HomeRouting {
     }
     
     func goToProfile() {
-        
+        let vc = ProfileAssembly.build()
+        self.view.present(vc, animated: true)
     }
     
     func goToDetail(detail: Movie) {

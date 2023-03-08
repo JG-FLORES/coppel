@@ -37,6 +37,13 @@
 		C91FBE9829B7E32E0010AB08 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE9729B7E32E0010AB08 /* DetailPresenter.swift */; };
 		C91FBE9A29B7E3440010AB08 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE9929B7E3440010AB08 /* DetailRouter.swift */; };
 		C91FBE9C29B7E35A0010AB08 /* DetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91FBE9B29B7E35A0010AB08 /* DetailAssembly.swift */; };
+		C983DC4029B805770055B772 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C983DC3E29B805770055B772 /* ProfileViewController.swift */; };
+		C983DC4129B805770055B772 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C983DC3F29B805770055B772 /* ProfileViewController.xib */; };
+		C983DC4329B805A70055B772 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C983DC4229B805A70055B772 /* ProfileInteractor.swift */; };
+		C983DC4529B828F80055B772 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C983DC4429B828F80055B772 /* ProfilePresenter.swift */; };
+		C983DC4729B829090055B772 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C983DC4629B829090055B772 /* ProfileRouter.swift */; };
+		C983DC4929B829220055B772 /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C983DC4829B829220055B772 /* ProfileEntity.swift */; };
+		C983DC4B29B829320055B772 /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C983DC4A29B829320055B772 /* ProfileAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +79,13 @@
 		C91FBE9729B7E32E0010AB08 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		C91FBE9929B7E3440010AB08 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		C91FBE9B29B7E35A0010AB08 /* DetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembly.swift; sourceTree = "<group>"; };
+		C983DC3E29B805770055B772 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C983DC3F29B805770055B772 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		C983DC4229B805A70055B772 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		C983DC4429B828F80055B772 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		C983DC4629B829090055B772 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		C983DC4829B829220055B772 /* ProfileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEntity.swift; sourceTree = "<group>"; };
+		C983DC4A29B829320055B772 /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +118,7 @@
 		C91FBE4D29B7BF1A0010AB08 /* Coppel */ = {
 			isa = PBXGroup;
 			children = (
+				C91FBE9D29B805190010AB08 /* Profile */,
 				C91FBE7929B7CE9C0010AB08 /* Utils */,
 				C91FBE7C29B7D23C0010AB08 /* Home */,
 				C91FBE6229B7C0DC0010AB08 /* Login */,
@@ -195,6 +210,20 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		C91FBE9D29B805190010AB08 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C983DC3E29B805770055B772 /* ProfileViewController.swift */,
+				C983DC3F29B805770055B772 /* ProfileViewController.xib */,
+				C983DC4229B805A70055B772 /* ProfileInteractor.swift */,
+				C983DC4429B828F80055B772 /* ProfilePresenter.swift */,
+				C983DC4629B829090055B772 /* ProfileRouter.swift */,
+				C983DC4829B829220055B772 /* ProfileEntity.swift */,
+				C983DC4A29B829320055B772 /* ProfileAssembly.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,6 +284,7 @@
 			files = (
 				C91FBE7729B7C4590010AB08 /* LoginViewController.xib in Resources */,
 				C91FBE5B29B7BF1C0010AB08 /* LaunchScreen.storyboard in Resources */,
+				C983DC4129B805770055B772 /* ProfileViewController.xib in Resources */,
 				C91FBE9429B7E2EE0010AB08 /* DetailViewController.xib in Resources */,
 				C91FBE8029B7D25B0010AB08 /* HomeViewController.xib in Resources */,
 				C91FBE8F29B7D98C0010AB08 /* HomeViewCell.xib in Resources */,
@@ -276,11 +306,14 @@
 				C91FBE4F29B7BF1A0010AB08 /* AppDelegate.swift in Sources */,
 				C91FBE5129B7BF1A0010AB08 /* SceneDelegate.swift in Sources */,
 				C91FBE6C29B7C1870010AB08 /* LoginEntity.swift in Sources */,
+				C983DC4029B805770055B772 /* ProfileViewController.swift in Sources */,
 				C91FBE9829B7E32E0010AB08 /* DetailPresenter.swift in Sources */,
 				C91FBE8829B7D2E70010AB08 /* HomeRouter.swift in Sources */,
 				C91FBE8A29B7D2F80010AB08 /* HomeAssembly.swift in Sources */,
 				C91FBE6E29B7C19A0010AB08 /* LoginRouter.swift in Sources */,
 				C91FBE7029B7C1B20010AB08 /* LoginAssembly.swift in Sources */,
+				C983DC4929B829220055B772 /* ProfileEntity.swift in Sources */,
+				C983DC4529B828F80055B772 /* ProfilePresenter.swift in Sources */,
 				C91FBE8429B7D2C20010AB08 /* HomePresenter.swift in Sources */,
 				C91FBE9329B7E2EE0010AB08 /* DetailViewController.swift in Sources */,
 				C91FBE9629B7E3190010AB08 /* DetailInteractor.swift in Sources */,
@@ -289,9 +322,12 @@
 				C91FBE6829B7C11F0010AB08 /* LoginPresenter.swift in Sources */,
 				C91FBE7629B7C4590010AB08 /* LoginViewController.swift in Sources */,
 				C91FBE7329B7C2E10010AB08 /* NavigationBuilder.swift in Sources */,
+				C983DC4729B829090055B772 /* ProfileRouter.swift in Sources */,
 				C91FBE9C29B7E35A0010AB08 /* DetailAssembly.swift in Sources */,
 				C91FBE8629B7D2D20010AB08 /* HomeEntity.swift in Sources */,
+				C983DC4329B805A70055B772 /* ProfileInteractor.swift in Sources */,
 				C91FBE7F29B7D25B0010AB08 /* HomeViewController.swift in Sources */,
+				C983DC4B29B829320055B772 /* ProfileAssembly.swift in Sources */,
 				C91FBE8E29B7D98C0010AB08 /* HomeViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -73,7 +73,7 @@
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="tX2-ZG-fBj" firstAttribute="top" secondItem="5D5-9O-bvp" secondAttribute="bottom" constant="23" id="0bM-yG-Mct"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5D5-9O-bvp" secondAttribute="trailing" constant="19" id="0q8-a4-ml7"/>
@@ -96,6 +96,9 @@
     </objects>
     <resources>
         <image name="unnamed" width="256" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

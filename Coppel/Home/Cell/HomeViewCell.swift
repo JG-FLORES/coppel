@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeViewCell: UICollectionViewCell {
 
@@ -13,7 +14,7 @@ class HomeViewCell: UICollectionViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var descriptioon: UILabel!
-    
+    @IBOutlet weak var vote: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +24,7 @@ class HomeViewCell: UICollectionViewCell {
 
     func setupUI(data: Movie) {
         descriptioon.text = data.overview
-
+        vote.text = data.vote_average?.description ?? ""
         if data.title != nil {
             title.text = data.title
         } else if data.name != nil {
@@ -35,12 +36,8 @@ class HomeViewCell: UICollectionViewCell {
         } else if data.first_air_date != nil {
             date.text = data.first_air_date
         }
-
-//        guard let image = data.backdrop_path else { return }
-//        DispatchQueue.main.async {
-//            let url = URL(string: "https://api.themoviedb.org\(image)")!
-//            let data = try? Data(contentsOf: url)
-//            self.image.image = UIImage(data: data!)
-//        }
+        
+        image.kf.indicatorType = .activity
+        image.kf.setImage(with: URL(string:"https://image.tmdb.org/t/p/w200\(data.poster_path ?? "")"), placeholder: nil, options: [.transition(.fade(1.7))],completionHandler: nil)
     }
 }

@@ -27,10 +27,14 @@ class HomeViewController: UIViewController {
         collectionView.register(UINib(nibName: "HomeViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         presenter?.fetch(url: "https://api.themoviedb.org/3/movie/popular?api_key=54b4dae81703af84602fb788f06fc875&language=en-US&page=1")
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(addTapped))        
+        let btnBack = UIBarButtonItem(image: UIImage(systemName: "chart.bar.doc.horizontal.fill"), style: .done, target: self, action: #selector(showOptionsMenu))
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.barStyle = .black
+        self.navigationItem.rightBarButtonItem = btnBack
     }
     
-    @objc func addTapped() {
+    @objc func showOptionsMenu() {
         let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
         
         let deleteAction = UIAlertAction(title: "View Profile", style: .default, handler: { (UIAlertAction) in

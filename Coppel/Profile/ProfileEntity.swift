@@ -10,3 +10,7 @@ import Foundation
 struct User: Codable {
     let user: String?
 }
+
+struct Favorite: Codable {
+    let user: String?
+}

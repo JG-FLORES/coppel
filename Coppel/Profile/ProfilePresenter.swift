@@ -9,6 +9,7 @@ import Foundation
 
 protocol ProfilePresentation {
     func profile()
+    func favorite()
 }
 
 
@@ -26,6 +27,17 @@ class ProfilePresenter {
 }
 
 extension ProfilePresenter: ProfilePresentation {
+    
+    func favorite() {
+        interactor.fetchFavorite { result in
+            switch result {
+            case .succes(data: let data):
+                self.view?.favorite(favorite: data)
+            case .failed(string: let string):
+                self.view?.error(error: string ?? "")
+            }
+        }
+    }
     
     func profile() {
         interactor.fetch { result in

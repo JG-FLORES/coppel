@@ -120,6 +120,7 @@
 			children = (
 				C91FBE7929B7CE9C0010AB08 /* Utils */,
 				C91FBE9D29B805190010AB08 /* Profile */,
+				C91FBE9029B7E2B10010AB08 /* Detail */,
 				C91FBE7C29B7D23C0010AB08 /* Home */,
 				C91FBE6229B7C0DC0010AB08 /* Login */,
 				C91FBE4E29B7BF1A0010AB08 /* AppDelegate.swift */,
@@ -175,7 +176,6 @@
 		C91FBE7C29B7D23C0010AB08 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				C91FBE9029B7E2B10010AB08 /* Detail */,
 				C91FBE8B29B7D9650010AB08 /* Cell */,
 				C91FBE7D29B7D25B0010AB08 /* HomeViewController.swift */,
 				C91FBE7E29B7D25B0010AB08 /* HomeViewController.xib */,

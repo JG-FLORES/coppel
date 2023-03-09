@@ -14,13 +14,16 @@ enum ServiceResult {
 
 typealias ServiceCompletion = (_ result: ServiceResult) -> ()
 
+// MARK: LoginUseCase protocol
 protocol LoginUseCase {
     func fetchRequest(user: String, password: String, callback: @escaping ServiceCompletion)
 }
 
+// MARK: LoginInteractor class
 class LoginInteractor {
 }
 
+// MARK: LoginInteractor protocol
 extension LoginInteractor: LoginUseCase {
     func fetchRequest(user: String, password: String, callback: @escaping ServiceCompletion) {
         guard let url = URL(string: "\(Network.token)?api_key=\(Network.APIKey)") else { return }
@@ -31,10 +34,6 @@ extension LoginInteractor: LoginUseCase {
                 return
             }
             do {
-                if let string = String(bytes: data, encoding: .utf8) {
-                    print(string)
-                }
-                
                 let response = try JSONDecoder().decode(ResultResponse.self, from: data)
                 
                 if response.success {
@@ -60,11 +59,13 @@ extension LoginInteractor: LoginUseCase {
                             callback(.result(data: entities))
                         }
                         catch {
+                            callback(.error(str: "Ah ocurrido una falla"))
                         }
                     }.resume()
                 }
             }
             catch {
+                callback(.error(str: "Ah ocurrido una falla"))
             }
         }
         task.resume()

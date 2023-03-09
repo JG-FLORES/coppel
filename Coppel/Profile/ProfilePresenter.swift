@@ -7,12 +7,14 @@
 
 import Foundation
 
+// MARK: ProfilePresentation Protocol
 protocol ProfilePresentation {
     func profile()
     func favorite()
 }
 
 
+// MARK: ProfilePresenter Class
 class ProfilePresenter {
     
     weak var view: ProfileView?
@@ -26,6 +28,7 @@ class ProfilePresenter {
     }
 }
 
+// MARK: ProfilePresenter Protocol
 extension ProfilePresenter: ProfilePresentation {
     
     func favorite() {

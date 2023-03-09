@@ -7,10 +7,12 @@
 
 import Foundation
 
+// MARK: DetailPresentation Protocol
 protocol DetailPresentation {
     
 }
 
+// MARK: DetailPresenter class
 class DetailPresenter {
     
     weak var view: DetailView?
@@ -24,6 +26,7 @@ class DetailPresenter {
     }
 }
 
+// MARK: DetailPresenter Protocol
 extension DetailPresenter: DetailPresentation {
     
 }

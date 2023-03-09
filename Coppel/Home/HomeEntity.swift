@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: Movies struct
 struct Movies: Codable {
     let page: Int?
     var results: [Movie]
@@ -16,6 +17,7 @@ struct Movies: Codable {
     }
 }
 
+// MARK: Movie struct
 struct Movie: Codable {
     var original_language: String?
     var original_title: String?

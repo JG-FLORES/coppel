@@ -7,14 +7,17 @@
 
 import Foundation
 
+// MARK: DetailUserCase Protocol
 protocol DetailUserCase {
     
 }
 
+// MARK: DetailInteractor class
 class DetailInteractor {
     
 }
 
+// MARK: DetailInteractor Protocol
 extension DetailInteractor: DetailUserCase {
     
 }

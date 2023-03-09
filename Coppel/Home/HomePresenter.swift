@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: HomePresentation protocol
 protocol HomePresentation {
     func fetch(url: String)
     func goToDetail(detail: Movie)
@@ -14,6 +15,7 @@ protocol HomePresentation {
     func logOut()
 }
 
+// MARK: HomePresenter class
 class HomePresenter {
     
     weak var view: HomeView?
@@ -28,6 +30,7 @@ class HomePresenter {
 }
 
 
+// MARK: HomePresenter protocol
 extension HomePresenter: HomePresentation {
     
     func logOut() {

@@ -8,10 +8,12 @@
 import UIKit
 import Kingfisher
 
+// MARK: DetailView Protocol
 protocol DetailView: AnyObject {
     
 }
 
+// MARK: DetailViewController View
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var image: UIImageView!
@@ -64,6 +66,7 @@ class DetailViewController: UIViewController {
     }
 }
 
+// MARK: DetailViewController Protocol
 extension DetailViewController: DetailView {
     
 }

@@ -20,15 +20,18 @@ enum ResultFavorite {
 typealias CompletionUser = (_ result: ResultUser) -> ()
 typealias CompletionFavorite = (_ result: ResultFavorite) -> ()
 
+// MARK: ProfileUserCase Protocol
 protocol ProfileUserCase {
     func fetch(callback: @escaping CompletionUser)
     func fetchFavorite(callback: @escaping CompletionFavorite)
 }
 
+// MARK: ProfileInteractor Class
 class ProfileInteractor {
     
 }
 
+// MARK: ProfileInteractor Protocol
 extension ProfileInteractor: ProfileUserCase {
     
     func fetchFavorite(callback: @escaping CompletionFavorite) {
@@ -36,7 +39,7 @@ extension ProfileInteractor: ProfileUserCase {
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data, error == nil else {
-                callback(.failed(string: "Ah fallado..."))
+                callback(.error(str: "Ah ocurrido una falla"))
                 return
             }
             do {
@@ -48,7 +51,7 @@ extension ProfileInteractor: ProfileUserCase {
                 callback(.succes(data: entities.results))
             }
             catch {
-                callback(.failed(string: "Ah fallado..3322..."))
+                callback(.error(str: "Ah ocurrido una falla"))
             }
         }
         task.resume()
@@ -60,7 +63,7 @@ extension ProfileInteractor: ProfileUserCase {
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data, error == nil else {
-                callback(.failed(string: "Ah fallado..."))
+                callback(.error(str: "Ah ocurrido una falla"))
                 return
             }
             do {
@@ -72,7 +75,7 @@ extension ProfileInteractor: ProfileUserCase {
                 callback(.succes(data: entities))
             }
             catch {
-                callback(.failed(string: "Ah fallado..3322..."))
+                callback(.error(str: "Ah ocurrido una falla"))
             }
         }
         task.resume()

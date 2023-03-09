@@ -7,11 +7,13 @@
 
 import UIKit
 
+// MARK: LoginView Protocol
 protocol LoginView: AnyObject {
     func upDate(data: Login)
     func error(str: String)
 }
 
+// MARK: LoginViewController View
 class LoginViewController: UIViewController {
     
     var presenter: LoginPresenter?
@@ -41,6 +43,7 @@ class LoginViewController: UIViewController {
     }
 }
 
+// MARK: LoginViewController Protocol
 extension LoginViewController: LoginView {
     
     func error(str: String) {

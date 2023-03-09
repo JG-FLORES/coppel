@@ -7,11 +7,13 @@
 
 import Foundation
 
+// MARK: LoginPresentation protocol
 protocol LoginPresentation {
     func login(user: String, password: String)
     func prepareForRouter()
 }
 
+// MARK: LoginPresenter class
 class LoginPresenter {
     weak var view: LoginView?
     var interactor: LoginUseCase
@@ -25,6 +27,7 @@ class LoginPresenter {
     
 }
 
+// MARK: LoginPresenter protocol
 extension LoginPresenter: LoginPresentation {
     
     func prepareForRouter() {

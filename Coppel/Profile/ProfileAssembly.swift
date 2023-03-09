@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: ProfileAssembly Class
 class ProfileAssembly {
     
     static func build() -> UIViewController {

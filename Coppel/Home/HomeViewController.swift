@@ -7,11 +7,13 @@
 
 import UIKit
 
+// MARK: HomeView Protocol
 protocol HomeView: AnyObject {
     func upDatePopular(data: [Movie])
     func error(data: String)
 }
 
+// MARK: HomeViewController View
 class HomeViewController: UIViewController {
     
     var presenter: HomePresenter?
@@ -27,10 +29,8 @@ class HomeViewController: UIViewController {
         collectionView.register(UINib(nibName: "HomeViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         presenter?.fetch(url: "\(Network.ForMoview)popular?api_key=\(Network.APIKey)&language=en-US&page=1")
         
-        let btnBack = UIBarButtonItem(image: UIImage(systemName: "chart.bar.doc.horizontal.fill"), style: .done, target: self, action: #selector(showOptionsMenu))
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        let btnBack = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .done, target: self, action: #selector(showOptionsMenu))
         navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.barStyle = .black
         self.navigationItem.rightBarButtonItem = btnBack
     }
     
@@ -77,6 +77,7 @@ class HomeViewController: UIViewController {
     }
 }
 
+// MARK: HomeViewController Protocol
 extension HomeViewController: HomeView {
     func upDatePopular(data: [Movie]) {
         DispatchQueue.main.async {
@@ -86,10 +87,10 @@ extension HomeViewController: HomeView {
     }
     
     func error(data: String) {
-        
     }
 }
 
+// MARK: Collection Delegate - DataSource
 extension HomeViewController:  UICollectionViewDelegate, UICollectionViewDataSource {
     
     func configure() {
@@ -114,9 +115,9 @@ extension HomeViewController:  UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         presenter?.goToDetail(detail: movies[indexPath.row])
     }
-    
 }
 
+// MARK: Collection Layout
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

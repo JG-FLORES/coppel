@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: LoginAssembly protocol
 class LoginAssembly {
     
     static func buildNavigation(usingNavigationFactory factory: NavigationFactory) -> UINavigationController {

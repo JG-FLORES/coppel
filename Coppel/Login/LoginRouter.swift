@@ -7,10 +7,12 @@
 
 import UIKit
 
+// MARK: LoginRouting protocol
 protocol LoginRouting {
     func goToHome()
 }
 
+// MARK: LoginRouter class
 class LoginRouter {
     
     var view: UIViewController
@@ -20,6 +22,7 @@ class LoginRouter {
     }
 }
 
+// MARK: LoginRouter protocol
 extension LoginRouter: LoginRouting {
     func goToHome() {
         let prefs = UserDefaults.standard

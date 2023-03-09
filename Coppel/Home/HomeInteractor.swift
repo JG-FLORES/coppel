@@ -14,14 +14,17 @@ enum Result {
 
 typealias Completion = (_ result: Result) -> ()
 
+// MARK: HomeUserCase protocol
 protocol HomeUserCase {
     func fetch(url: String, callback: @escaping Completion)
 }
 
+// MARK: HomeInteractor class
 class HomeInteractor {
     
 }
 
+// MARK: HomeInteractor protocol
 extension HomeInteractor: HomeUserCase {
         
     func fetch(url: String, callback: @escaping Completion) {
@@ -29,19 +32,15 @@ extension HomeInteractor: HomeUserCase {
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data, error == nil else {
-                callback(.failed(string: "Ah fallado..."))
+                callback(.error(str: "Ah ocurrido una falla"))
                 return
             }
             do {
-                if let string = String(bytes: data, encoding: .utf8) {
-                    print(string)
-                }
-                
                 let entities = try JSONDecoder().decode(Movies.self, from: data)
                 callback(.succes(data: entities.results))
             }
             catch {
-                callback(.failed(string: "Ah fallado..3322..."))
+                callback(.error(str: "Ah ocurrido una falla"))
             }
         }
         task.resume()

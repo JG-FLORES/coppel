@@ -7,12 +7,14 @@
 
 import UIKit
 
+// MARK: HomeRouting protocol
 protocol HomeRouting {
     func goToDetail(detail: Movie)
     func goToProfile()
     func logOut()
 }
 
+// MARK: HomeRouter class
 class HomeRouter {
     
     let view: UIViewController
@@ -22,6 +24,7 @@ class HomeRouter {
     }
 }
 
+// MARK: HomeRouter protocol
 extension HomeRouter: HomeRouting {
     
     func logOut() {

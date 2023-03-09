@@ -7,10 +7,12 @@
 
 import UIKit
 
+// MARK: DetailRouting Protocol
 protocol DetailRouting {
     
 }
 
+// MARK: DetailRouter class
 class DetailRouter {
     
     let view: UIViewController
@@ -20,6 +22,7 @@ class DetailRouter {
     }
 }
 
+// MARK: DetailRouter Protocol
 extension DetailRouter: DetailRouting {
     
 }

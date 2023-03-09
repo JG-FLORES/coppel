@@ -8,6 +8,7 @@
 import UIKit
 import Kingfisher
 
+// MARK: HomeViewCell class
 class HomeViewCell: UICollectionViewCell {
 
     @IBOutlet weak var image: UIImageView!

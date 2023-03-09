@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: DetailAssembly class
 class DetailAssembly {
     
     static func build(detail: Movie) -> UIViewController {

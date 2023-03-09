@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: HomeAssembly class
 class HomeAssembly {
     
     static func build() -> UIViewController {

@@ -7,10 +7,12 @@
 
 import UIKit
 
+// MARK: ProfileRouting Protocol
 protocol ProfileRouting {
     
 }
 
+// MARK: ProfileRouter Class
 class ProfileRouter {
     
     let view: UIViewController
@@ -20,6 +22,7 @@ class ProfileRouter {
     }
 }
 
+// MARK: ProfileRouter Protocol
 extension ProfileRouter: ProfileRouting {
     
 }

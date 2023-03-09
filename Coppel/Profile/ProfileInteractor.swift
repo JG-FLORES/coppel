@@ -39,7 +39,7 @@ extension ProfileInteractor: ProfileUserCase {
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data, error == nil else {
-                callback(.error(str: "Ah ocurrido una falla"))
+                callback(.failed(string: "Ah ocurrido una falla"))
                 return
             }
             do {
@@ -51,7 +51,7 @@ extension ProfileInteractor: ProfileUserCase {
                 callback(.succes(data: entities.results))
             }
             catch {
-                callback(.error(str: "Ah ocurrido una falla"))
+                callback(.failed(string: "Ah ocurrido una falla"))
             }
         }
         task.resume()
@@ -63,7 +63,7 @@ extension ProfileInteractor: ProfileUserCase {
         
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data, error == nil else {
-                callback(.error(str: "Ah ocurrido una falla"))
+                callback(.failed(string: "Ah ocurrido una falla"))
                 return
             }
             do {
@@ -75,7 +75,7 @@ extension ProfileInteractor: ProfileUserCase {
                 callback(.succes(data: entities))
             }
             catch {
-                callback(.error(str: "Ah ocurrido una falla"))
+                callback(.failed(string: "Ah ocurrido una falla"))
             }
         }
         task.resume()
